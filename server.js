@@ -20,7 +20,7 @@ const app = express();
 //add middleware
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-frontend.vercel.app"
+  "https://user-portfolio-iota.vercel.app/"
 ];
 
 app.use(cors({
