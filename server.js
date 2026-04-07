@@ -36,6 +36,10 @@ app.use(cors({
 
 app.use(express.json());
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("OK");
+});
+
 app.use('/api/contact',contactRoutes);
 app.use('/api/projects',projectRoutes);
 app.use('/api/certificates',certificateRoutes);
