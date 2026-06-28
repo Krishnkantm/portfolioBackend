@@ -21,7 +21,7 @@ const app = express();
 //add middleware
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-frontend.vercel.app"
+  "https://user-portfolio-iota.vercel.app"
 ];
 
 app.use(cors({
@@ -36,6 +36,10 @@ app.use(cors({
 }));
 
 app.use(express.json());
+
+app.get("/ping", (req, res) => {
+  res.status(200).send("OK");
+});
 
 app.use('/api/contact',contactRoutes);
 app.use('/api/projects',projectRoutes);
