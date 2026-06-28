@@ -14,6 +14,7 @@ const authRoutes = require('./routes/authRoutes.js');
 const skillRoutes = require('./routes/skillRoutes.js');
 const profileRoutes = require('./routes/profileRoutes.js');
 const storageRoutes = require('./routes/storageRoutes.js');
+const chatRoutes = require("./routes/chatRoutes.js");
 
 const app = express();
 
@@ -43,11 +44,12 @@ app.use('/api/auth',authRoutes);
 app.use('/api/skill',skillRoutes);
 app.use('/api/profile',profileRoutes);
 app.use('/api/storage',storageRoutes);
+app.use('/api/chat',chatRoutes);
 
 // console.log("db_name",process.env.CLOUD_NAME);
 // console.log("db_name2",cloudinary.config());
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT,()=>{
     console.log(`server is running...${PORT}`);
