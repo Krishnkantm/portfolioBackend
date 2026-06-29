@@ -28,21 +28,16 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
-    // allow tools like Postman or server-to-server
-    if (!origin) return callback(null, true);
-
-    if (allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.includes(origin)) {
       return callback(null, true);
     }
-
-    // fallback allow (prevents Render CORS crash)
-    return callback(null, true);
+    return callback(null, true); // prevent crash
   },
   credentials: true
 }));
 
 app.use(express.json());
-app.options("*", cors()); 
+app.options("/*", cors()); 
 
 
 app.get("/ping", (req, res) => {
