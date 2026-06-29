@@ -22,7 +22,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "https://user-portfolio-iota.vercel.app",
- "https://finance-dashboard-system-1-lz5a.onrender.com"
+ "https://portfoliobackend-1-ccd2.onrender.com"
 ];
 
 app.use(cors({
