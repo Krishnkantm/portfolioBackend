@@ -20,8 +20,8 @@ const app = express();
 
 //add middleware
 const allowedOrigins = [
-  "http://localhost:5173",
-  "https://user-portfolio-iota.vercel.app",
+  "http://localhost:5000",
+  "user-portfolio-iota.vercel.app",
  "https://portfoliobackend-1-ccd2.onrender.com"
 ];
 
@@ -50,9 +50,6 @@ app.use('/api/skill',skillRoutes);
 app.use('/api/profile',profileRoutes);
 app.use('/api/storage',storageRoutes);
 app.use('/api/chat',chatRoutes);
-
-// console.log("db_name",process.env.CLOUD_NAME);
-// console.log("db_name2",cloudinary.config());
 
 const PORT = process.env.PORT || 3000;
 
