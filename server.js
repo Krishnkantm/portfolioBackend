@@ -21,7 +21,8 @@ const app = express();
 //add middleware
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://user-portfolio-iota.vercel.app"
+  "https://user-portfolio-iota.vercel.app",
+ "https://finance-dashboard-system-1-lz5a.onrender.com"
 ];
 
 app.use(cors({
