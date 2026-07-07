@@ -39,6 +39,9 @@ app.use("/api/profile", profileRoutes);
 app.use("/api/storage", storageRoutes);
 app.use("/api/chat", chatRoutes);
 
+app.get("/", (req, res) => {
+    res.status(200).send("Portfolio Backend is Running");
+});
 
 const PORT = process.env.PORT || 3000;
 
